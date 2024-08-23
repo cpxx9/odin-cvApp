@@ -18,7 +18,7 @@ export default [
       },
     },
     settings: { react: { version: '18.3' } },
-    extends: ['airbnb-base', 'prettier'],
+    // extends: ['airbnb-base', 'prettier'],
     plugins: {
       react,
       'react-hooks': reactHooks,
