@@ -38,7 +38,7 @@ export default function EducationInputs({ educationDetails, stateController }) {
 
   return (
     <>
-      <h2>Education Details:</h2>
+      <h3>Education Details:</h3>
       <ul>
         <li>
           <label>
