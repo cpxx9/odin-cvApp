@@ -1,5 +1,5 @@
-import { useState } from "react";
+import { useState } from 'react';
 
-export default funtion Section() {
-  
+export default function CVSection({ children }) {
+  return <div className="card">{children}</div>;
 }
