@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './styles/App.css';
 import GeneralInputs from './components/GeneralInputs';
 import CVInputSection from './components/CVInputSection';
+import CVDisplay from './components/CVDisplay';
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
@@ -13,12 +14,19 @@ function App() {
   });
 
   return (
-    <CVInputSection>
-      <GeneralInputs
-        personalDetails={personalDetails}
-        stateController={setPersonalDetails}
-      />
-    </CVInputSection>
+    <div>
+      <div>
+        <CVInputSection>
+          <GeneralInputs
+            personalDetails={personalDetails}
+            stateController={setPersonalDetails}
+          />
+        </CVInputSection>
+      </div>
+      <div>
+        <CVDisplay personalDetails={personalDetails} />
+      </div>
+    </div>
   );
 }
 
