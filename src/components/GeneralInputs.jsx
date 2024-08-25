@@ -1,45 +1,37 @@
 import { useState } from 'react';
 import CustomInput from './CustomInput';
 
-export default function GeneralInputs() {
-  const [personalDetails, setPersonalDetails] = useState({
-    fullName: 'John Doe',
-    currentPosition: 'System Administrator',
-    phoneNumber: '8881114444',
-    email: 'john@doe.com',
-    location: 'Palo Alto, US'
-  });
-
+export default function GeneralInputs({ personalDetails, stateController }) {
   const handleNameChange = (e) => {
-    setPersonalDetails((prevDetails) => ({
+    stateController((prevDetails) => ({
       ...prevDetails,
       fullName: e.target.value
     }));
   };
 
   const handlePositionChange = (e) => {
-    setPersonalDetails((prevDetails) => ({
+    stateController((prevDetails) => ({
       ...prevDetails,
       currentPosition: e.target.value
     }));
   };
 
   const handlePhoneChange = (e) => {
-    setPersonalDetails((prevDetails) => ({
+    stateController((prevDetails) => ({
       ...prevDetails,
       phoneNumber: e.target.value
     }));
   };
 
   const handleEmailChange = (e) => {
-    setPersonalDetails((prevDetails) => ({
+    stateController((prevDetails) => ({
       ...prevDetails,
       email: e.target.value
     }));
   };
 
   const handleLocationChange = (e) => {
-    setPersonalDetails((prevDetails) => ({
+    stateController((prevDetails) => ({
       ...prevDetails,
       location: e.target.value
     }));
