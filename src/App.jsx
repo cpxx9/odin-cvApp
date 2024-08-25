@@ -17,8 +17,8 @@ function App() {
   const [educationDetails, setEducationDetails] = useState({
     school: 'MIT',
     degree: 'Computer Science',
-    startDate: 'September, 2018',
-    endDate: 'May, 2022',
+    startDate: '2018-09',
+    endDate: '2022-05',
     location: 'Boston, USA'
   });
 
@@ -39,7 +39,10 @@ function App() {
         </CVInputSection>
       </div>
       <div className="section display-section">
-        <CVDisplay personalDetails={personalDetails} />
+        <CVDisplay
+          personalDetails={personalDetails}
+          educationDetails={educationDetails}
+        />
       </div>
     </div>
   );

@@ -64,8 +64,8 @@ export default function EducationInputs({ educationDetails, stateController }) {
           <label>
             Start Date:
             <input
-              type="date"
-              placeholder="Start date"
+              type="month"
+              placeholder="xxxx-xx"
               onChange={handleStartDateChange}
               value={educationDetails.startDate}
             />
@@ -75,8 +75,8 @@ export default function EducationInputs({ educationDetails, stateController }) {
           <label>
             End Date:
             <input
-              type="date"
-              placeholder="End date"
+              type="month"
+              placeholder="xxxx-xx"
               onChange={handleEndDateChange}
               value={educationDetails.endDate}
             />
