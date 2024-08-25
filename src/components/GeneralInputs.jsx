@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import CustomInput from './CustomInput';
 
 export default function GeneralInputs({ personalDetails, stateController }) {

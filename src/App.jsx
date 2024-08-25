@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './styles/App.css';
 import GeneralInputs from './components/GeneralInputs';
+import EducationInputs from './components/EducationInputs';
 import CVInputSection from './components/CVInputSection';
 import CVDisplay from './components/CVDisplay';
 
@@ -13,6 +14,14 @@ function App() {
     location: 'Palo Alto, US'
   });
 
+  const [educationDetails, setEducationDetails] = useState({
+    school: 'MIT',
+    degree: 'Computer Science',
+    startDate: 'September, 2018',
+    endDate: 'May, 2022',
+    location: 'Boston, USA'
+  });
+
   return (
     <div className="main-app">
       <div className="section input-section">
@@ -20,6 +29,12 @@ function App() {
           <GeneralInputs
             personalDetails={personalDetails}
             stateController={setPersonalDetails}
+          />
+        </CVInputSection>
+        <CVInputSection>
+          <EducationInputs
+            educationDetails={educationDetails}
+            stateController={setEducationDetails}
           />
         </CVInputSection>
       </div>

@@ -1,3 +1,3 @@
 export default function CVInputSection({ children }) {
-  return <section className="card">{children}</section>;
+  return <section className="inputCard">{children}</section>;
 }
