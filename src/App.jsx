@@ -14,8 +14,8 @@ function App() {
   });
 
   return (
-    <div>
-      <div>
+    <div className="main-app">
+      <div className="section input-section">
         <CVInputSection>
           <GeneralInputs
             personalDetails={personalDetails}
@@ -23,7 +23,7 @@ function App() {
           />
         </CVInputSection>
       </div>
-      <div>
+      <div className="section display-section">
         <CVDisplay personalDetails={personalDetails} />
       </div>
     </div>

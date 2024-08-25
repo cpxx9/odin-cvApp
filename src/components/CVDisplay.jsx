@@ -5,6 +5,7 @@ export default function CVDisplay({ personalDetails }) {
   return (
     <section>
       <h1>{personalDetails.fullName}</h1>
+      <h3>{personalDetails.currentPosition}</h3>
       <ul>
         <li>
           <img src="" alt="" />
