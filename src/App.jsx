@@ -1,13 +1,13 @@
 import { useState } from 'react';
 import './styles/App.css';
-import General from './components/General';
-import CVSection from './components/Section';
+import GeneralInputs from './components/GeneralInputs';
+import CVInputSection from './components/CVInputSection';
 
 function App() {
   return (
-    <CVSection>
-      <General text="Why is this not working??" />
-    </CVSection>
+    <CVInputSection>
+      <GeneralInputs />
+    </CVInputSection>
   );
 }
 
