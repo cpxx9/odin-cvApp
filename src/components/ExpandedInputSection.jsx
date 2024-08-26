@@ -4,22 +4,9 @@ import { v4 as uuid } from 'uuid';
 export default function ExpandedInputSection({
   sectionState,
   setSectionState,
-  title
+  title,
+  addFunction
 }) {
-  function addEducationSection() {
-    const newSection = {
-      school: '',
-      degree: '',
-      startDate: '',
-      endDate: '',
-      location: '',
-      id: uuid(),
-      displayId: uuid()
-    };
-    let newArr = [...sectionState, newSection];
-    setSectionState(newArr);
-  }
-
   return (
     <>
       <h1>{title}</h1>
@@ -36,7 +23,7 @@ export default function ExpandedInputSection({
           </li>
         ))}
       </ul>
-      <button onClick={addEducationSection}>Add education</button>
+      <button onClick={addFunction}>Add {title.toLowerCase()}</button>
     </>
   );
 }

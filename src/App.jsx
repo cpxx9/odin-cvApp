@@ -35,6 +35,20 @@ function App() {
     }
   ]);
 
+  function addEducationSection() {
+    const newSection = {
+      school: '',
+      degree: '',
+      startDate: '',
+      endDate: '',
+      location: '',
+      id: uuid(),
+      displayId: uuid()
+    };
+    let newArr = [...educationDetails, newSection];
+    setEducationDetails(newArr);
+  }
+
   return (
     <div className="main-app">
       <div className="section input-section">
@@ -49,6 +63,7 @@ function App() {
             sectionState={educationDetails}
             setSectionState={setEducationDetails}
             title={'Education'}
+            addFunction={addEducationSection}
           />
         </CVInputSection>
       </div>
