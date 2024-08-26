@@ -33,6 +33,12 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
     setWorkDetails(newArr);
   };
 
+  const handleDescriptionChange = (e) => {
+    let newArr = [...workDetails];
+    newArr[currentIndex].description = e.target.value;
+    setWorkDetails(newArr);
+  };
+
   function removeWorkItem() {
     let newArr = [...workDetails];
     newArr.splice(currentIndex, 1);
@@ -89,6 +95,16 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
               placeholder={'Location'}
               value={workDetails[currentIndex].location}
               onChange={handleLocationChange}
+            />
+          </label>
+        </li>
+        <li>
+          <label>
+            Description:
+            <textarea
+              placeholder="Short description about what you did here"
+              value={workDetails[currentIndex].description}
+              onChange={handleDescriptionChange}
             />
           </label>
         </li>
