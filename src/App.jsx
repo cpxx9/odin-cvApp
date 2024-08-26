@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import './styles/App.css';
+import { v4 as uuid } from 'uuid';
 import GeneralInputs from './components/GeneralInputs';
-import EducationInputs from './components/EducationInputs';
+import ExpandedInputSection from './components/ExpandedInputSection';
 import CVInputSection from './components/CVInputSection';
 import CVDisplay from './components/CVDisplay';
 
@@ -14,13 +15,16 @@ function App() {
     location: 'Palo Alto, US'
   });
 
-  const [educationDetails, setEducationDetails] = useState({
-    school: 'MIT',
-    degree: 'Computer Science',
-    startDate: '2018-09',
-    endDate: '2022-05',
-    location: 'Boston, USA'
-  });
+  const [educationDetails, setEducationDetails] = useState([
+    {
+      school: 'MIT',
+      degree: 'Computer Science',
+      startDate: '2018-09',
+      endDate: '2022-05',
+      location: 'Boston, USA',
+      id: uuid()
+    }
+  ]);
 
   return (
     <div className="main-app">
@@ -32,9 +36,10 @@ function App() {
           />
         </CVInputSection>
         <CVInputSection>
-          <EducationInputs
-            educationDetails={educationDetails}
-            stateController={setEducationDetails}
+          <ExpandedInputSection
+            sectionState={educationDetails}
+            setSectionState={setEducationDetails}
+            title={'Education'}
           />
         </CVInputSection>
       </div>

@@ -28,19 +28,19 @@ export default function CVDisplay({ personalDetails, educationDetails }) {
         <h2>Education</h2>
         <ul>
           <li>
-            <p>{educationDetails.school}</p>
+            <p>{educationDetails[0].school}</p>
           </li>
           <li>
-            <p>{educationDetails.degree}</p>
+            <p>{educationDetails[0].degree}</p>
           </li>
           <li>
-            <p>{educationDetails.startDate}</p>
+            <p>{educationDetails[0].startDate}</p>
           </li>
           <li>
-            <p>{educationDetails.endDate}</p>
+            <p>{educationDetails[0].endDate}</p>
           </li>
           <li>
-            <p>{educationDetails.location}</p>
+            <p>{educationDetails[0].location}</p>
           </li>
         </ul>
       </section>
