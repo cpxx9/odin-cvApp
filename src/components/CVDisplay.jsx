@@ -27,21 +27,22 @@ export default function CVDisplay({ personalDetails, educationDetails }) {
       <section>
         <h2>Education</h2>
         <ul>
-          <li>
-            <p>{educationDetails[0].school}</p>
-          </li>
-          <li>
-            <p>{educationDetails[0].degree}</p>
-          </li>
-          <li>
-            <p>{educationDetails[0].startDate}</p>
-          </li>
-          <li>
-            <p>{educationDetails[0].endDate}</p>
-          </li>
-          <li>
-            <p>{educationDetails[0].location}</p>
-          </li>
+          {educationDetails.map((item) => (
+            <li key={item.displayId}>
+              <ul>
+                <li>
+                  {item.startDate} - {item.endDate}
+                </li>
+                <li>{item.location}</li>
+              </ul>
+              <ul>
+                <li>
+                  <h4>{item.school}</h4>
+                </li>
+                <li>{item.degree}</li>
+              </ul>
+            </li>
+          ))}
         </ul>
       </section>
     </>

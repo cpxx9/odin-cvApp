@@ -30,7 +30,8 @@ function App() {
       startDate: '2018-09',
       endDate: '2022-05',
       location: 'Boston, USA',
-      id: uuid()
+      id: uuid(),
+      displayId: uuid()
     }
   ]);
 
