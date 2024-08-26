@@ -49,6 +49,28 @@ export default function CVDisplay({
           ))}
         </ul>
       </section>
+      <section>
+        <h2>Work</h2>
+        <ul>
+          {workDetails.map((item) => (
+            <li key={item.displayId}>
+              <ul>
+                <li>
+                  {item.startDate} - {item.endDate}
+                </li>
+                <li>{item.location}</li>
+              </ul>
+              <ul>
+                <li>
+                  <h4>{item.company}</h4>
+                </li>
+                <li>{item.position}</li>
+                <li>{item.description}</li>
+              </ul>
+            </li>
+          ))}
+        </ul>
+      </section>
     </>
   );
 }
