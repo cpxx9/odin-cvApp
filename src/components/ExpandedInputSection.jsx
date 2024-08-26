@@ -1,4 +1,5 @@
 import EducationInputs from './EducationInputs';
+import WorkInputs from './WorkInputs';
 import { v4 as uuid } from 'uuid';
 
 export default function ExpandedInputSection({
@@ -19,8 +20,17 @@ export default function ExpandedInputSection({
                   return (
                     <EducationInputs
                       educationDetails={sectionState}
-                      currentID={arrItem.id}
+                      currentId={arrItem.id}
                       setEducationDetails={setSectionState}
+                    />
+                  );
+                }
+                case 'Work': {
+                  return (
+                    <WorkInputs
+                      workDetails={sectionState}
+                      setWorkDetails={setSectionState}
+                      currentId={arrItem.id}
                     />
                   );
                 }

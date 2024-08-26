@@ -3,9 +3,9 @@ import CustomInput from './CustomInput';
 export default function EducationInputs({
   educationDetails,
   setEducationDetails,
-  currentID
+  currentId
 }) {
-  const currentIndex = educationDetails.findIndex((e) => e.id === currentID);
+  const currentIndex = educationDetails.findIndex((e) => e.id === currentId);
 
   const handleSchoolChange = (e) => {
     let newArr = [...educationDetails];

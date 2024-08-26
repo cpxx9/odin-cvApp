@@ -105,6 +105,7 @@ function App() {
         <CVDisplay
           personalDetails={personalDetails}
           educationDetails={educationDetails}
+          workDetails={workDetails}
         />
       </div>
     </div>

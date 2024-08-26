@@ -1,6 +1,10 @@
 import EducationInputs from './EducationInputs';
 
-export default function CVDisplay({ personalDetails, educationDetails }) {
+export default function CVDisplay({
+  personalDetails,
+  educationDetails,
+  workDetails
+}) {
   const emailLink = 'mailto:' + personalDetails.email;
   const phoneLink = 'tel:' + personalDetails.phoneNumber;
 
