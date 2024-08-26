@@ -23,6 +23,14 @@ function App() {
       endDate: '2022-05',
       location: 'Boston, USA',
       id: uuid()
+    },
+    {
+      school: 'MIT',
+      degree: 'Computer Science',
+      startDate: '2018-09',
+      endDate: '2022-05',
+      location: 'Boston, USA',
+      id: uuid()
     }
   ]);
 

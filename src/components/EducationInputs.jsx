@@ -2,13 +2,40 @@ import CustomInput from './CustomInput';
 
 export default function EducationInputs({
   educationDetails,
-  setEducationDetails
+  setEducationDetails,
+  currentID
 }) {
-  // const handleSchoolChange = (index) => (e) => {
-  //   let newArr = [...educationDetails];
-  //   newArr[index].school = e.target.value;
-  //   setEducationDetails(newArr);
-  // };
+  const currentIndex = educationDetails.findIndex((e) => e.id === currentID);
+
+  const handleSchoolChange = (e) => {
+    let newArr = [...educationDetails];
+    newArr[currentIndex].school = e.target.value;
+    setEducationDetails(newArr);
+  };
+
+  const handleDegreeChange = (e) => {
+    let newArr = [...educationDetails];
+    newArr[currentIndex].degree = e.target.value;
+    setEducationDetails(newArr);
+  };
+
+  const handleStartChange = (e) => {
+    let newArr = [...educationDetails];
+    newArr[currentIndex].startDate = e.target.value;
+    setEducationDetails(newArr);
+  };
+
+  const handleEndChange = (e) => {
+    let newArr = [...educationDetails];
+    newArr[currentIndex].endDate = e.target.value;
+    setEducationDetails(newArr);
+  };
+
+  const handleLocationChange = (e) => {
+    let newArr = [...educationDetails];
+    newArr[currentIndex].location = e.target.value;
+    setEducationDetails(newArr);
+  };
 
   return (
     <ul>
@@ -17,7 +44,8 @@ export default function EducationInputs({
           School:
           <CustomInput
             placeholder={'School name'}
-            value={educationDetails.school}
+            value={educationDetails[currentIndex].school}
+            onChange={handleSchoolChange}
           />
         </label>
       </li>
@@ -26,7 +54,8 @@ export default function EducationInputs({
           Degree:
           <CustomInput
             placeholder={'Degree obtained'}
-            value={educationDetails.degree}
+            value={educationDetails[currentIndex].degree}
+            onChange={handleDegreeChange}
           />
         </label>
       </li>
@@ -36,7 +65,8 @@ export default function EducationInputs({
           <input
             type="month"
             placeholder="xxxx-xx"
-            value={educationDetails.startDate}
+            value={educationDetails[currentIndex].startDate}
+            onChange={handleStartChange}
           />
         </label>
       </li>
@@ -46,7 +76,8 @@ export default function EducationInputs({
           <input
             type="month"
             placeholder="xxxx-xx"
-            value={educationDetails.endDate}
+            value={educationDetails[currentIndex].endDate}
+            onChange={handleEndChange}
           />
         </label>
       </li>
@@ -55,7 +86,8 @@ export default function EducationInputs({
           Location:
           <CustomInput
             placeholder={'Location'}
-            value={educationDetails.location}
+            value={educationDetails[currentIndex].location}
+            onChange={handleLocationChange}
           />
         </label>
       </li>

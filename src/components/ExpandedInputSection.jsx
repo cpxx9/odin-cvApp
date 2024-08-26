@@ -10,10 +10,11 @@ export default function ExpandedInputSection({
       <h1>{title}</h1>
       <ul>
         {sectionState.map((arrItem) => (
-          <li key={arrItem.key}>
+          <li key={arrItem.id}>
             {title === 'Education' && (
               <EducationInputs
-                educationDetails={arrItem}
+                educationDetails={sectionState}
+                currentID={arrItem.id}
                 setEducationDetails={setSectionState}
               />
             )}
