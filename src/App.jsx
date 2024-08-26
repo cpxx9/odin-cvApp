@@ -35,6 +35,32 @@ function App() {
     }
   ]);
 
+  const [workDetails, setWorkDetails] = useState([
+    {
+      company: 'Test Company',
+      position: 'Engineer',
+      startDate: '2019-12',
+      endDate: 'present',
+      location: 'Palo Alto, USA',
+      description: '',
+      id: uuid()
+    }
+  ]);
+
+  function addWorkSection() {
+    const newSection = {
+      company: '',
+      position: '',
+      startDate: '',
+      endDate: '',
+      location: '',
+      description: '',
+      id: uuid()
+    };
+    let newArr = [...workDetails, newSection];
+    setWorkDetails(newArr);
+  }
+
   function addEducationSection() {
     const newSection = {
       school: '',
@@ -64,6 +90,14 @@ function App() {
             setSectionState={setEducationDetails}
             title={'Education'}
             addFunction={addEducationSection}
+          />
+        </CVInputSection>
+        <CVInputSection>
+          <ExpandedInputSection
+            sectionState={workDetails}
+            setSectionState={setWorkDetails}
+            title={'Work'}
+            addFunction={addWorkSection}
           />
         </CVInputSection>
       </div>

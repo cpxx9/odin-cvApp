@@ -13,13 +13,23 @@ export default function ExpandedInputSection({
       <ul>
         {sectionState.map((arrItem) => (
           <li key={arrItem.id}>
-            {title === 'Education' && (
-              <EducationInputs
-                educationDetails={sectionState}
-                currentID={arrItem.id}
-                setEducationDetails={setSectionState}
-              />
-            )}
+            {(() => {
+              switch (title) {
+                case 'Education': {
+                  return (
+                    <EducationInputs
+                      educationDetails={sectionState}
+                      currentID={arrItem.id}
+                      setEducationDetails={setSectionState}
+                    />
+                  );
+                }
+
+                default: {
+                  return <p>Not working yet...</p>;
+                }
+              }
+            })()}
           </li>
         ))}
       </ul>
