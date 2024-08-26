@@ -25,11 +25,11 @@ function App() {
       id: uuid()
     },
     {
-      school: 'MIT',
-      degree: 'Computer Science',
-      startDate: '2018-09',
-      endDate: '2022-05',
-      location: 'Boston, USA',
+      school: 'Yale',
+      degree: 'Data Engineering',
+      startDate: '2019-10',
+      endDate: '2023-06',
+      location: 'New Haven, USA',
       id: uuid(),
       displayId: uuid()
     }
