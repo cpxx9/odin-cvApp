@@ -2,13 +2,20 @@
   display: flex;
 }
 
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-section {
   flex: 1;
 }
 
 .display-section {
-  display: flex;
-  flex-direction: column;
   align-items: center;
-  flex: 3;
+  flex: 2;
+}
+
+ul {
+  list-style: none;
 }
