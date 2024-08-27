@@ -1,4 +1,5 @@
 import EducationInputs from './EducationInputs';
+import '../styles/CVDisplay.css';
 
 export default function CVDisplay({
   personalDetails,

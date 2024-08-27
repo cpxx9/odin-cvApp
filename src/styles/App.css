@@ -1,5 +1,7 @@
 .main-app {
   display: flex;
+  gap: 1em;
+  margin: 2em;
 }
 
 .section {
@@ -9,10 +11,10 @@
 
 .input-section {
   flex: 1;
+  gap: 24px;
 }
 
 .display-section {
-  align-items: center;
   flex: 2;
 }
 
