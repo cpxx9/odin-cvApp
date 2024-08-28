@@ -110,7 +110,7 @@ export default function EducationInputs({
           </li>
         </ul>
       ) : (
-        educationDetails[currentIndex].school
+        <h4>{educationDetails[currentIndex].school}</h4>
       )}
       <button onClick={removeEducationItem}>Remove</button>
     </div>

@@ -122,7 +122,7 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
           </li>
         </ul>
       ) : (
-        workDetails[currentIndex].company
+        <h4>{workDetails[currentIndex].company}</h4>
       )}
       <button onClick={removeWorkItem}>Remove</button>
     </div>
