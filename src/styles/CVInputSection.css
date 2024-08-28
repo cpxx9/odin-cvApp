@@ -52,9 +52,27 @@
   gap: 1em;
 }
 
+
 .input-card label {
   display: flex;
   flex-direction: column;
+}
+
+.input-btn-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  position: relative;
+}
+
+.show-btn {
+  position: absolute;
+  right: 0;
+  top: -4%;
+}
+
+.input-btn {
+  align-self: center;
 }
 
 .inputs-list {

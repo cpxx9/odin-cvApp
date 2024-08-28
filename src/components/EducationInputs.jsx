@@ -57,7 +57,9 @@ export default function EducationInputs({
 
   return (
     <div className="input-btn-section">
-      <button onClick={toggleShow}>{panelActive ? 'hide' : 'show'}</button>
+      <button className="input-btn show-btn" onClick={toggleShow}>
+        {panelActive ? 'hide' : 'show'}
+      </button>
       {panelActive ? (
         <ul className="inputs-list">
           <li>
@@ -118,7 +120,9 @@ export default function EducationInputs({
       ) : (
         <h4>{educationDetails[currentIndex].school}</h4>
       )}
-      <button onClick={removeEducationItem}>Remove</button>
+      <button className="input-btn remove-btn" onClick={removeEducationItem}>
+        Remove
+      </button>
     </div>
   );
 }

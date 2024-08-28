@@ -59,7 +59,9 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
 
   return (
     <div className="input-btn-section">
-      <button onClick={toggleShow}>{panelActive ? 'hide' : 'show'}</button>
+      <button className="input-btn show-btn" onClick={toggleShow}>
+        {panelActive ? 'hide' : 'show'}
+      </button>
       {panelActive ? (
         <ul className="inputs-list">
           <li>
@@ -130,7 +132,9 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
       ) : (
         <h4>{workDetails[currentIndex].company}</h4>
       )}
-      <button onClick={removeWorkItem}>Remove</button>
+      <button className="input-btn remove-btn" onClick={removeWorkItem}>
+        Remove
+      </button>
     </div>
   );
 }
