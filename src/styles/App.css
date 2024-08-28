@@ -28,5 +28,6 @@ ul {
   .main-app {
     flex-direction: column;
     align-items: normal;
+    margin: .5em;
   }
 }
