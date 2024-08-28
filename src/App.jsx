@@ -7,46 +7,35 @@ import CVInputSection from './components/CVInputSection';
 import CVDisplay from './components/CVDisplay';
 
 function App() {
-  const [personalDetails, setPersonalDetails] = useState({
-    fullName: '',
-    currentPosition: '',
-    phoneNumber: '',
-    email: '',
-    location: ''
-  });
+  const initialPersonalDetails = () => {
+    return (
+      JSON.parse(localStorage.getItem('personalItems')) || {
+        fullName: '',
+        currentPosition: '',
+        phoneNumber: '',
+        email: '',
+        location: ''
+      }
+    );
+  };
 
-  const [educationDetails, setEducationDetails] = useState([
-    // {
-    //   school: 'MIT',
-    //   degree: 'Computer Science',
-    //   startDate: '2018-09',
-    //   endDate: '2022-05',
-    //   location: 'Boston, USA',
-    //   id: uuid()
-    // },
-    // {
-    //   school: 'Yale',
-    //   degree: 'Data Engineering',
-    //   startDate: '2019-10',
-    //   endDate: '2023-06',
-    //   location: 'New Haven, USA',
-    //   id: uuid(),
-    //   displayId: uuid()
-    // }
-  ]);
+  const initialWorkDetails = () => {
+    return JSON.parse(localStorage.getItem('workItems')) || [];
+  };
 
-  const [workDetails, setWorkDetails] = useState([
-    // {
-    //   company: 'Test Company',
-    //   position: 'Engineer',
-    //   startDate: '2019-12',
-    //   endDate: 'present',
-    //   location: 'Palo Alto, USA',
-    //   description: '',
-    //   id: uuid(),
-    //   displayId: uuid()
-    // }
-  ]);
+  const initialEducationDetails = () => {
+    return JSON.parse(localStorage.getItem('educationItems')) || [];
+  };
+
+  const [personalDetails, setPersonalDetails] = useState(
+    initialPersonalDetails
+  );
+
+  const [educationDetails, setEducationDetails] = useState(
+    initialEducationDetails
+  );
+
+  const [workDetails, setWorkDetails] = useState(initialWorkDetails);
 
   function addWorkSection() {
     const newSection = {

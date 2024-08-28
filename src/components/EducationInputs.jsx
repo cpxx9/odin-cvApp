@@ -14,36 +14,42 @@ export default function EducationInputs({
     let newArr = [...educationDetails];
     newArr[currentIndex].school = e.target.value;
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   };
 
   const handleDegreeChange = (e) => {
     let newArr = [...educationDetails];
     newArr[currentIndex].degree = e.target.value;
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   };
 
   const handleStartChange = (e) => {
     let newArr = [...educationDetails];
     newArr[currentIndex].startDate = e.target.value;
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   };
 
   const handleEndChange = (e) => {
     let newArr = [...educationDetails];
     newArr[currentIndex].endDate = e.target.value;
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   };
 
   const handleLocationChange = (e) => {
     let newArr = [...educationDetails];
     newArr[currentIndex].location = e.target.value;
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   };
 
   function removeEducationItem() {
     let newArr = [...educationDetails];
     newArr.splice(currentIndex, 1);
     setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   }
 
   const [panelActive, setPanelActive] = useState(true);

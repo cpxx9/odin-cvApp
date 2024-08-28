@@ -10,42 +10,49 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
     let newArr = [...workDetails];
     newArr[currentIndex].company = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handlePositionChange = (e) => {
     let newArr = [...workDetails];
     newArr[currentIndex].position = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handleStartChange = (e) => {
     let newArr = [...workDetails];
     newArr[currentIndex].startDate = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handleEndChange = (e) => {
     let newArr = [...workDetails];
     newArr[currentIndex].endDate = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handleLocationChange = (e) => {
     let newArr = [...workDetails];
     newArr[currentIndex].location = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handleDescriptionChange = (e) => {
     let newArr = [...workDetails];
     newArr[currentIndex].description = e.target.value;
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   function removeWorkItem() {
     let newArr = [...workDetails];
     newArr.splice(currentIndex, 1);
     setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   }
 
   const [panelActive, setPanelActive] = useState(true);

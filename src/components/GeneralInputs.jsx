@@ -6,6 +6,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
       ...prevDetails,
       fullName: e.target.value
     }));
+    localStorage.setItem('personalItems', JSON.stringify(personalDetails));
   };
 
   const handlePositionChange = (e) => {
@@ -13,6 +14,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
       ...prevDetails,
       currentPosition: e.target.value
     }));
+    localStorage.setItem('personalItems', JSON.stringify(personalDetails));
   };
 
   const handlePhoneChange = (e) => {
@@ -20,6 +22,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
       ...prevDetails,
       phoneNumber: e.target.value
     }));
+    localStorage.setItem('personalItems', JSON.stringify(personalDetails));
   };
 
   const handleEmailChange = (e) => {
@@ -27,6 +30,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
       ...prevDetails,
       email: e.target.value
     }));
+    localStorage.setItem('personalItems', JSON.stringify(personalDetails));
   };
 
   const handleLocationChange = (e) => {
@@ -34,6 +38,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
       ...prevDetails,
       location: e.target.value
     }));
+    localStorage.setItem('personalItems', JSON.stringify(personalDetails));
   };
 
   return (
