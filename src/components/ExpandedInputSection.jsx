@@ -42,7 +42,9 @@ export default function ExpandedInputSection({
             }
           })()
         )}
-      <button onClick={addFunction}>Add {title.toLowerCase()}</button>
+      <button className="add-btn" onClick={addFunction}>
+        +
+      </button>
     </>
   );
 }
