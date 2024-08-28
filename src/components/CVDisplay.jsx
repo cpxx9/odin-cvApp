@@ -1,5 +1,8 @@
 import EducationInputs from './EducationInputs';
 import '../styles/CVDisplay.css';
+import envelope from '../assets/envelope.svg';
+import location from '../assets/marker.svg';
+import phone from '../assets/phone.svg';
 
 export default function CVDisplay({
   personalDetails,
@@ -16,15 +19,15 @@ export default function CVDisplay({
         <h4>{personalDetails.currentPosition}</h4>
         <ul>
           <li>
-            <img src="" alt="" />
+            <img src={envelope} alt="email icon" />
             <p>{personalDetails.email}</p>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={phone} alt="phone icon" />
             <p>{personalDetails.phoneNumber}</p>
           </li>
           <li>
-            <img src="" alt="" />
+            <img src={location} alt="location marker icon" />
             <p>{personalDetails.location}</p>
           </li>
         </ul>

@@ -13,6 +13,21 @@
   padding: 1em 0;
 }
 
+.display-section-main.personal-section ul {
+  display: flex;
+  gap: 1em;
+}
+
+.display-section-main.personal-section li {
+  display: flex;
+  gap: .3em;
+}
+
+.display-section-main.personal-section img {
+  width: 25px;
+  height: 25px;
+}
+
 .display-section-items {
   padding: 1em 4em;
   display: flex;
