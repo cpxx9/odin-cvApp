@@ -69,3 +69,23 @@
 .education-section ul li ul li {
   justify-content: flex-end;
 }
+
+@media  screen and (max-width:1200px) {
+  .display-section-main.personal-section ul {
+    flex-direction: column;
+    gap: 0.2em;
+  }
+
+  .display-section-items {
+    padding: 1em 1em;
+  }
+
+  .display-section-details ul {
+    padding: .25em 0;
+  }
+
+  .work-section ul li {
+    justify-content: flex-end;
+    text-align: end;
+  }
+}
