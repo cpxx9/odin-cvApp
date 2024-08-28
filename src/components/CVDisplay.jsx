@@ -11,7 +11,7 @@ export default function CVDisplay({
 
   return (
     <>
-      <section>
+      <section className="display-section-main personal-section">
         <h1>{personalDetails.fullName}</h1>
         <h4>{personalDetails.currentPosition}</h4>
         <ul>
@@ -29,7 +29,7 @@ export default function CVDisplay({
           </li>
         </ul>
       </section>
-      <section>
+      <section className="display-section-item education-section">
         <h2>Education</h2>
         <ul>
           {educationDetails.map((item) => (
@@ -51,7 +51,7 @@ export default function CVDisplay({
           ))}
         </ul>
       </section>
-      <section>
+      <section className="display-section-item work-section">
         <h2>Work</h2>
         <ul>
           {workDetails.map((item) => (
