@@ -63,12 +63,13 @@
   flex-direction: column;
   gap: 1em;
   position: relative;
+  box-shadow: none;
 }
 
 .show-btn {
   position: absolute;
   right: 0;
-  top: -4%;
+  top: 0;
 }
 
 .input-btn {
