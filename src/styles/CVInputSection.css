@@ -25,11 +25,11 @@
 .input-card ul {
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1em;
+  padding: 0;
 }
 
 .input-card label {
   display: flex;
-  /* justify-self: flex-start; */
+  flex-direction: column;
 }
