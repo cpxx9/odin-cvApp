@@ -40,3 +40,24 @@
   color: #353e42;
   padding: .25em 1em;
 }
+
+.education-section > ul {
+  padding: 1em 1em;
+}
+
+.education-section ul > li {
+  display: flex;
+  justify-content: space-between;
+}
+
+.education-section ul li h4 {
+  text-align: end;
+}
+
+.education-section ul li ul {
+  padding: 0;
+}
+
+.education-section ul li ul li {
+  justify-content: flex-end;
+}

@@ -19,7 +19,6 @@ export default function CVDisplay({
         <h4>{personalDetails.currentPosition}</h4>
         <ul>
           <li>
-            {console.log({ personalDetails })}
             {personalDetails.email !== '' && (
               <img src={envelope} alt="email icon" />
             )}
