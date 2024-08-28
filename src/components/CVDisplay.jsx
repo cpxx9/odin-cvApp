@@ -29,51 +29,53 @@ export default function CVDisplay({
           </li>
         </ul>
       </section>
-      <section className="display-section-item education-section">
-        <h2>Education</h2>
-        <ul>
-          {educationDetails.map((item) => (
-            <li key={item.displayId}>
-              <ul>
-                <li>
-                  {item.startDate} -{' '}
-                  {item.endDate === '' ? 'present' : item.endDate}
-                </li>
-                <li>{item.location}</li>
-              </ul>
-              <ul>
-                <li>
-                  <h4>{item.school}</h4>
-                </li>
-                <li>{item.degree}</li>
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section className="display-section-item work-section">
-        <h2>Work</h2>
-        <ul>
-          {workDetails.map((item) => (
-            <li key={item.displayId}>
-              <ul>
-                <li>
-                  {item.startDate} -{' '}
-                  {item.endDate === '' ? 'present' : item.endDate}
-                </li>
-                <li>{item.location}</li>
-              </ul>
-              <ul>
-                <li>
-                  <h4>{item.company}</h4>
-                </li>
-                <li>{item.position}</li>
-                <li>{item.description}</li>
-              </ul>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="display-section-items">
+        <section className="display-section-details education-section">
+          <h2>Education</h2>
+          <ul>
+            {educationDetails.map((item) => (
+              <li key={item.displayId}>
+                <ul>
+                  <li>
+                    {item.startDate} -{' '}
+                    {item.endDate === '' ? 'present' : item.endDate}
+                  </li>
+                  <li>{item.location}</li>
+                </ul>
+                <ul>
+                  <li>
+                    <h4>{item.school}</h4>
+                  </li>
+                  <li>{item.degree}</li>
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
+        <section className="display-section-details work-section">
+          <h2>Work</h2>
+          <ul>
+            {workDetails.map((item) => (
+              <li key={item.displayId}>
+                <ul>
+                  <li>
+                    {item.startDate} -{' '}
+                    {item.endDate === '' ? 'present' : item.endDate}
+                  </li>
+                  <li>{item.location}</li>
+                </ul>
+                <ul>
+                  <li>
+                    <h4>{item.company}</h4>
+                  </li>
+                  <li>{item.position}</li>
+                  <li>{item.description}</li>
+                </ul>
+              </li>
+            ))}
+          </ul>
+        </section>
+      </div>
     </>
   );
 }

@@ -7,9 +7,18 @@
 .display-section-main.personal-section {
   background-color: #10425e;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
 }
 
-.display-section-item h2 {
-  background-color: black;
-  color: white;
+.display-section-items {
+  padding: 1em 4em;
+}
+
+.display-section-details h2 {
+  background-color: lightgray;
+  color: #353e42;
+  padding: .25em 1em;
 }
