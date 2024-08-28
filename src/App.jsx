@@ -8,11 +8,11 @@ import CVDisplay from './components/CVDisplay';
 
 function App() {
   const [personalDetails, setPersonalDetails] = useState({
-    // fullName: 'John Doe',
-    // currentPosition: 'System Administrator',
-    // phoneNumber: '8881114444',
-    // email: 'john@doe.com',
-    // location: 'Palo Alto, US'
+    fullName: '',
+    currentPosition: '',
+    phoneNumber: '',
+    email: '',
+    location: ''
   });
 
   const [educationDetails, setEducationDetails] = useState([

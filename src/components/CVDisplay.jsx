@@ -19,15 +19,22 @@ export default function CVDisplay({
         <h4>{personalDetails.currentPosition}</h4>
         <ul>
           <li>
-            <img src={envelope} alt="email icon" />
+            {console.log({ personalDetails })}
+            {personalDetails.email !== '' && (
+              <img src={envelope} alt="email icon" />
+            )}
             <p>{personalDetails.email}</p>
           </li>
           <li>
-            <img src={phone} alt="phone icon" />
+            {personalDetails.phoneNumber !== '' && (
+              <img src={phone} alt="phone icon" />
+            )}
             <p>{personalDetails.phoneNumber}</p>
           </li>
           <li>
-            <img src={location} alt="location marker icon" />
+            {personalDetails.location !== '' && (
+              <img src={location} alt="location marker icon" />
+            )}
             <p>{personalDetails.location}</p>
           </li>
         </ul>
