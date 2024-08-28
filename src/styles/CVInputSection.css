@@ -17,6 +17,17 @@
 
 .input-card > button {
   border-radius: 0 0 7px 7px;
+  border: none;
+}
+
+.input-card button:hover {
+  cursor: pointer;
+}
+
+.input-card > button:hover,
+.input-card > button:focus {
+  background-color: #f9f9f9;
+  outline: 1px darkgray solid;
 }
 
 .general-inputs-list {
