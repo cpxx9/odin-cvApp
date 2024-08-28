@@ -46,7 +46,7 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
   }
 
   return (
-    <div>
+    <div className="input-btn-section">
       <ul className="inputs-list">
         <li>
           <label>
