@@ -15,6 +15,9 @@
 
 .display-section-items {
   padding: 1em 4em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .display-section-details h2 {
