@@ -55,27 +55,30 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
     localStorage.setItem('workItems', JSON.stringify(workDetails));
   }
 
-  const [panelActive, setPanelActive] = useState(true);
-
   function toggleShow() {
-    if (panelActive && workDetails[currentIndex].company === '') {
+    if (
+      workDetails[currentIndex].active &&
+      workDetails[currentIndex].company === ''
+    ) {
       removeWorkItem();
       return;
     }
-    const newActive = !panelActive;
-    setPanelActive(newActive);
+    let newArr = [...workDetails];
+    newArr[currentIndex].active = !workDetails[currentIndex].active;
+    setWorkDetails(newArr);
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   }
 
   return (
     <div className="input-btn-section">
       <button className="input-btn show-btn" onClick={toggleShow}>
         <img
-          className={panelActive ? 'flip' : ''}
+          className={workDetails[currentIndex].active ? 'flip' : ''}
           src={arrow}
           alt="show/hide toggle"
         />
       </button>
-      {panelActive ? (
+      {workDetails[currentIndex].active ? (
         <ul className="inputs-list">
           <li>
             <label>
@@ -147,7 +150,9 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
       )}
       <button
         className={
-          panelActive ? 'input-btn remove-btn move-btn' : 'input-btn remove-btn'
+          workDetails[currentIndex].active
+            ? 'input-btn remove-btn move-btn'
+            : 'input-btn remove-btn'
         }
         onClick={removeWorkItem}
       >

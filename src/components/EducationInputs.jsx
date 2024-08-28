@@ -52,27 +52,30 @@ export default function EducationInputs({
     localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   }
 
-  const [panelActive, setPanelActive] = useState(true);
-
   function toggleShow() {
-    if (panelActive && educationDetails[currentIndex].school === '') {
+    if (
+      educationDetails[currentIndex].active &&
+      educationDetails[currentIndex].school === ''
+    ) {
       removeEducationItem();
       return;
     }
-    const newActive = !panelActive;
-    setPanelActive(newActive);
+    let newArr = [...educationDetails];
+    newArr[currentIndex].active = !educationDetails[currentIndex].active;
+    setEducationDetails(newArr);
+    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
   }
 
   return (
     <div className="input-btn-section">
       <button className="input-btn flip show-btn" onClick={toggleShow}>
         <img
-          className={panelActive ? 'flip' : ''}
+          className={educationDetails[currentIndex].active ? 'flip' : ''}
           src={arrow}
           alt="show/hide toggle"
         />
       </button>
-      {panelActive ? (
+      {educationDetails[currentIndex].active ? (
         <ul className="inputs-list">
           <li>
             <label>
@@ -134,7 +137,9 @@ export default function EducationInputs({
       )}
       <button
         className={
-          panelActive ? 'input-btn remove-btn move-btn' : 'input-btn remove-btn'
+          educationDetails[currentIndex].active
+            ? 'input-btn remove-btn move-btn'
+            : 'input-btn remove-btn'
         }
         onClick={removeEducationItem}
       >

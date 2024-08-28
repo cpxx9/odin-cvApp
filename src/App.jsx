@@ -45,6 +45,7 @@ function App() {
       endDate: '',
       location: '',
       description: '',
+      active: true,
       id: uuid(),
       displayId: uuid()
     };
@@ -59,6 +60,7 @@ function App() {
       startDate: '',
       endDate: '',
       location: '',
+      active: false,
       id: uuid(),
       displayId: uuid()
     };
