@@ -60,7 +60,7 @@ function App() {
       startDate: '',
       endDate: '',
       location: '',
-      active: false,
+      active: true,
       id: uuid(),
       displayId: uuid()
     };

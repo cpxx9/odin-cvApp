@@ -49,7 +49,7 @@ export default function EducationInputs({
     let newArr = [...educationDetails];
     newArr.splice(currentIndex, 1);
     setEducationDetails(newArr);
-    localStorage.setItem('educationItems', JSON.stringify(educationDetails));
+    localStorage.setItem('educationItems', JSON.stringify(newArr));
   }
 
   function toggleShow() {
