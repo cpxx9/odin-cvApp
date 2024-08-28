@@ -39,7 +39,7 @@ export default function GeneralInputs({ personalDetails, stateController }) {
   return (
     <>
       <h2>Personal Details</h2>
-      <ul>
+      <ul className="general-inputs-list">
         <li>
           <label>
             Full name:

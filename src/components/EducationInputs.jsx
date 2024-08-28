@@ -45,7 +45,7 @@ export default function EducationInputs({
 
   return (
     <div>
-      <ul>
+      <ul className="inputs-list">
         <li>
           <label>
             School:

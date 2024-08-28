@@ -47,7 +47,7 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
 
   return (
     <div>
-      <ul>
+      <ul className="inputs-list">
         <li>
           <label>
             Company:

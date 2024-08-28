@@ -19,6 +19,10 @@
   border-radius: 0 0 7px 7px;
 }
 
+.general-inputs-list {
+  border-radius: 0 0 7px 7px;
+}
+
 .input-card input {
   border-radius: 3px;
   outline: none;
@@ -40,4 +44,8 @@
 .input-card label {
   display: flex;
   flex-direction: column;
+}
+
+.inputs-list {
+  padding: 0;
 }
