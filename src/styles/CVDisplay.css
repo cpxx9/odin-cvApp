@@ -41,8 +41,11 @@
   padding: .25em 1em;
 }
 
-.education-section > ul {
+.display-section-details > ul {
   padding: 1em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .education-section ul > li {
@@ -50,11 +53,16 @@
   justify-content: space-between;
 }
 
+.work-section ul > li {
+  display: flex;
+  gap: 1em;
+}
+
 .education-section ul li h4 {
   text-align: end;
 }
 
-.education-section ul li ul {
+.display-section-details ul li ul {
   padding: 0;
 }
 
