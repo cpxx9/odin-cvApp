@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import CustomInput from './CustomInput';
+import trash from '../assets/trash.svg';
+import arrow from '../assets/arrow.svg';
 
 export default function EducationInputs({
   educationDetails,
@@ -57,8 +59,13 @@ export default function EducationInputs({
 
   return (
     <div className="input-btn-section">
-      <button className="input-btn show-btn" onClick={toggleShow}>
-        {panelActive ? 'hide' : 'show'}
+      <button
+        className={
+          panelActive ? 'input-btn flip show-btn' : 'input-btn show-btn'
+        }
+        onClick={toggleShow}
+      >
+        <img src={arrow} alt="show/hide toggle" />
       </button>
       {panelActive ? (
         <ul className="inputs-list">
@@ -120,8 +127,13 @@ export default function EducationInputs({
       ) : (
         <h4>{educationDetails[currentIndex].school}</h4>
       )}
-      <button className="input-btn remove-btn" onClick={removeEducationItem}>
-        Remove
+      <button
+        className={
+          panelActive ? 'input-btn remove-btn move-btn' : 'input-btn remove-btn'
+        }
+        onClick={removeEducationItem}
+      >
+        <img src={trash} alt="remove icon" />
       </button>
     </div>
   );

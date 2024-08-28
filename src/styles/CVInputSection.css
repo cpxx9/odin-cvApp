@@ -66,14 +66,48 @@
   box-shadow: none;
 }
 
+.input-btn-section h4 {
+  text-align: center;
+}
+
 .show-btn {
-  position: absolute;
   right: 0;
   top: 0;
 }
 
+.input-btn.remove-btn {
+  left: 5%;
+  top: 30%;
+  width: 20px;
+  height: 20px;
+}
+
 .input-btn {
   align-self: center;
+  width: 30px;
+  height: 30px;
+  appearance: none;
+  border: none;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+}
+
+.input-btn:hover {
+  opacity: .6;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+.move-btn {
+  position: static;
+}
+
+.remove-btn:hover {
+  scale: 1.1;
 }
 
 .inputs-list {

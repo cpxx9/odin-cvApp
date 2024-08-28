@@ -1,5 +1,7 @@
 import CustomInput from './CustomInput';
 import { useState } from 'react';
+import trash from '../assets/trash.svg';
+import arrow from '../assets/arrow.svg';
 
 export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
   const currentIndex = workDetails.findIndex((e) => e.id === currentId);
@@ -59,8 +61,13 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
 
   return (
     <div className="input-btn-section">
-      <button className="input-btn show-btn" onClick={toggleShow}>
-        {panelActive ? 'hide' : 'show'}
+      <button
+        className={
+          panelActive ? 'input-btn flip show-btn' : 'input-btn show-btn'
+        }
+        onClick={toggleShow}
+      >
+        <img src={arrow} alt="show/hide toggle" />
       </button>
       {panelActive ? (
         <ul className="inputs-list">
@@ -132,8 +139,13 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
       ) : (
         <h4>{workDetails[currentIndex].company}</h4>
       )}
-      <button className="input-btn remove-btn" onClick={removeWorkItem}>
-        Remove
+      <button
+        className={
+          panelActive ? 'input-btn remove-btn move-btn' : 'input-btn remove-btn'
+        }
+        onClick={removeWorkItem}
+      >
+        <img src={trash} alt="delete icon" />
       </button>
     </div>
   );
