@@ -47,6 +47,10 @@ export default function EducationInputs({
   const [panelActive, setPanelActive] = useState(true);
 
   function toggleShow() {
+    if (panelActive && educationDetails[currentIndex].school === '') {
+      removeEducationItem();
+      return;
+    }
     const newActive = !panelActive;
     setPanelActive(newActive);
   }

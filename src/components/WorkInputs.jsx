@@ -49,6 +49,10 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
   const [panelActive, setPanelActive] = useState(true);
 
   function toggleShow() {
+    if (panelActive && workDetails[currentIndex].company === '') {
+      removeWorkItem();
+      return;
+    }
     const newActive = !panelActive;
     setPanelActive(newActive);
   }
