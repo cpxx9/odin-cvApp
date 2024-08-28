@@ -71,7 +71,8 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
         <li>
           <label>
             Start Date:
-            <CustomInput
+            <input
+              type="month"
               placeholder="xxxx-xx"
               value={workDetails[currentIndex].startDate}
               onChange={handleStartChange}
@@ -81,7 +82,8 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
         <li>
           <label>
             End Date:
-            <CustomInput
+            <input
+              type="month"
               placeholder="xxxx-xx"
               value={workDetails[currentIndex].endDate}
               onChange={handleEndChange}

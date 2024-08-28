@@ -36,7 +36,8 @@ export default function CVDisplay({
             <li key={item.displayId}>
               <ul>
                 <li>
-                  {item.startDate} - {item.endDate}
+                  {item.startDate} -{' '}
+                  {item.endDate === '' ? 'present' : item.endDate}
                 </li>
                 <li>{item.location}</li>
               </ul>
@@ -57,7 +58,8 @@ export default function CVDisplay({
             <li key={item.displayId}>
               <ul>
                 <li>
-                  {item.startDate} - {item.endDate}
+                  {item.startDate} -{' '}
+                  {item.endDate === '' ? 'present' : item.endDate}
                 </li>
                 <li>{item.location}</li>
               </ul>

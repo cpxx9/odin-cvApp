@@ -3,3 +3,25 @@
   border-radius: 5px;
   box-shadow: 0 7px 29px 0 hsla(240, 5%, 41%, .2);
 }
+
+.input-card input {
+  border-radius: 3px;
+  outline: none;
+  border: 1px grey solid;
+}
+
+.input-card input:focus {
+  background-color: lightgray;
+  outline: blue;
+  border: 2px black solid;
+}
+
+.input-card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.input-card label {
+
+}
