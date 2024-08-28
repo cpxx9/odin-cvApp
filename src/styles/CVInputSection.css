@@ -75,6 +75,10 @@
   top: 0;
 }
 
+.show-btn img {
+  transition: transform .2s;
+}
+
 .input-btn.remove-btn {
   left: 5%;
   top: 30%;

@@ -59,13 +59,12 @@ export default function EducationInputs({
 
   return (
     <div className="input-btn-section">
-      <button
-        className={
-          panelActive ? 'input-btn flip show-btn' : 'input-btn show-btn'
-        }
-        onClick={toggleShow}
-      >
-        <img src={arrow} alt="show/hide toggle" />
+      <button className="input-btn flip show-btn" onClick={toggleShow}>
+        <img
+          className={panelActive ? 'flip' : ''}
+          src={arrow}
+          alt="show/hide toggle"
+        />
       </button>
       {panelActive ? (
         <ul className="inputs-list">
