@@ -17,7 +17,7 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
     let newArr = [...workDetails];
     newArr[currentIndex].position = e.target.value;
     setWorkDetails(newArr);
-    localStorage.setItem('workItems', JSON.stringify(newArr));
+    localStorage.setItem('workItems', JSON.stringify(workDetails));
   };
 
   const handleStartChange = (e) => {
@@ -52,7 +52,7 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
     let newArr = [...workDetails];
     newArr.splice(currentIndex, 1);
     setWorkDetails(newArr);
-    localStorage.setItem('workItems', JSON.stringify(workDetails));
+    localStorage.setItem('workItems', JSON.stringify(newArr));
   }
 
   function toggleShow() {
