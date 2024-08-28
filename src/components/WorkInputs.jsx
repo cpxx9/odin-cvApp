@@ -64,7 +64,9 @@ export default function WorkInputs({ workDetails, setWorkDetails, currentId }) {
         <ul className="inputs-list">
           <li>
             <label>
-              Company:
+              <div>
+                Company <em>(required)</em>:
+              </div>
               <CustomInput
                 placeholder={'Company name'}
                 value={workDetails[currentIndex].company}

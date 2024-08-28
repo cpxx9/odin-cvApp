@@ -62,7 +62,9 @@ export default function EducationInputs({
         <ul className="inputs-list">
           <li>
             <label>
-              School:
+              <div>
+                School <em>(required)</em>:
+              </div>
               <CustomInput
                 placeholder={'School name'}
                 value={educationDetails[currentIndex].school}
