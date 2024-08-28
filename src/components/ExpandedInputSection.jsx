@@ -10,7 +10,7 @@ export default function ExpandedInputSection({
 }) {
   return (
     <>
-      <h1>{title}</h1>
+      <h2>{title}</h2>
       <ul>
         {sectionState.map((arrItem) => (
           <li key={arrItem.id}>
